@@ -5,14 +5,17 @@ class VerticalSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CarouselSlider(
-        options: CarouselOptions(
-          aspectRatio: 2.0,
-          enlargeCenterPage: true,
-          scrollDirection: Axis.horizontal,
-          autoPlay: true,
+      body: Container(
+        alignment: Alignment.topCenter,
+        child: CarouselSlider(
+          options: CarouselOptions(
+            aspectRatio: 2.0,
+            enlargeCenterPage: true,
+            scrollDirection: Axis.horizontal,
+            autoPlay: true,
+          ),
+          items: imageSliders,
         ),
-        items: imageSliders,
       ),
     );
   }

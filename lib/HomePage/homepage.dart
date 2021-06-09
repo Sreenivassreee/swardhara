@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara/HomePage/components/AboutAs.dart';
+import 'package:swardhara/HomePage/components/Learn_hindustani.dart';
 import 'package:swardhara/HomePage/components/live_performances.dart';
 import 'package:swardhara/HomePage/components/slider.dart';
 
@@ -7,21 +9,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTextStyle(
-      style: Theme.of(context).textTheme.bodyText2!,
-      child: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints viewportConstraints) {
-          return SingleChildScrollView(
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                minHeight: viewportConstraints.maxHeight,
-              ),
-              child: IntrinsicHeight(
-                child: Column(
+    return Scaffold(
+      body: DefaultTextStyle(
+        style: Theme.of(context).textTheme.bodyText2!,
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints viewportConstraints) {
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: viewportConstraints.minHeight,
+                ),
+                child: IntrinsicHeight(
+                    child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    SizedBox(height: 10),
                     Container(
                       height: 80,
-                      width: double.infinity,
                       child: Center(
                         child: Padding(
                           padding: const EdgeInsets.only(top: 40),
@@ -33,49 +38,20 @@ class HomePage extends StatelessWidget {
                       ),
                       color: Colors.orange,
                     ),
-                    Expanded(
-                      child: Container(
-                          color: const Color(0xffee0000), // Red
-                          height: 120.0,
-                          alignment: Alignment.center,
-                          child: VerticalSlider()),
-                    ),
-                    Expanded(child: LivePerformances()),
+                    SizedBox(height: 10),
+                    Expanded(child: VerticalSlider()),
+                    SizedBox(height: 10),
+                    Flexible(child: LivePerformances()),
+                    SizedBox(height: 10),
+                    LearnHisdustaniMusic(),
+                    AboutUs()
                   ],
-                ),
+                )),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
-
-  // SingleChildScrollView(
-
-  //   scrollDirection: Axis.vertical,
-  //   physics: BouncingScrollPhysics(),
-  //   child: Scaffold(
-  //       body: Column(
-  //     children: [
-  //       Container(
-  //         height: 80,
-  //         width: double.infinity,
-  //         child: Center(
-  //           child: Padding(
-  //             padding: const EdgeInsets.only(top: 40),
-  //             child: Text(
-  //               "Swardhara",
-  //               style: TextStyle(fontSize: 30),
-  //             ),
-  //           ),
-  //         ),
-  //         color: Colors.orange,
-  //       ),
-  //       Expanded(child: VerticalSlider()),
-  //       Expanded(child: LivePerformances())
-  //     ],
-  //   )),
-  // );
-  // }
 }
