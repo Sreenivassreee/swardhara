@@ -163,8 +163,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 InkWell(
                   onTap: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => ContactUs()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ContactUs()));
                   },
                   child: Text(
                     "Click here to Contact for SignUp issues",
