@@ -127,14 +127,7 @@ class SuggestedPage extends StatelessWidget {
                     padding: const EdgeInsets.only(
                         left: 10.0, right: 10, bottom: 10),
                     child: InkWell(
-                      onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => DetailedPage(),
-                        //   ),
-                        // );
-                      },
+                      onTap: () {},
                       child: Container(
                         width: double.infinity,
                         child: Row(
