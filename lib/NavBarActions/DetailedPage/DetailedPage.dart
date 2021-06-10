@@ -40,7 +40,7 @@ class DetailedPage extends StatelessWidget {
                         width: 15,
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width - 30,
+                        width: MediaQuery.of(context).size.width - 50,
                         child: Text(
                           'Complementary Volume - Free lessons to experience the learning ',
                           style: TextStyle(

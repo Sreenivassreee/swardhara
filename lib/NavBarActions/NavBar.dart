@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swardhara/HomePage/homepage.dart';
 import 'package:swardhara/LoginPage/LoginPage.dart';
+import 'package:swardhara/Profile/Profile.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -10,6 +11,7 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int _pageIndex = 0;
   PageController _pageController = PageController();
+  bool auth = true;
 
   @override
   void dispose() {
@@ -41,7 +43,7 @@ class _NavBarState extends State<NavBar> {
       'Index 3: Orders',
       style: optionStyle,
     ),
-    LoginPage()
+    Profile()
     // Text(
     //   'Index 3: Settings',
     //   style: optionStyle,
