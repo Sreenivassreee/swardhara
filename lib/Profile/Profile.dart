@@ -29,16 +29,26 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
-          height: 40,
-          margin: const EdgeInsets.all(5.0),
-          padding: const EdgeInsets.all(5.0),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.orange,
+        child: InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LoginPage(),
+              ),
+            );
+          },
+          child: Container(
+            height: 40,
+            margin: const EdgeInsets.all(5.0),
+            padding: const EdgeInsets.all(5.0),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.orange,
+              ),
             ),
+            child: Center(child: Text('LOGOUT')),
           ),
-          child: Center(child: Text('LOGOUT')),
         ),
       ),
       body: Column(

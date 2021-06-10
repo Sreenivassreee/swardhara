@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara/Suggested/SuggestedPage.dart';
 
 class LivePerformances extends StatelessWidget {
   const LivePerformances({Key? key}) : super(key: key);
@@ -27,10 +28,19 @@ class LivePerformances extends StatelessWidget {
           height: 150,
           child: Center(
             child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                itemBuilder: (BuildContext context, int index) {
-                  return Padding(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index) {
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SuggestedPage(),
+                      ),
+                    );
+                  },
+                  child: Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: Container(
                       height: 130,
@@ -43,8 +53,10 @@ class LivePerformances extends StatelessWidget {
                         ),
                       ),
                     ),
-                  );
-                }),
+                  ),
+                );
+              },
+            ),
           ),
         )
       ],
