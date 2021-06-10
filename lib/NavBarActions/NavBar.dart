@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:swardhara/Blogs/Blog.dart';
+import 'package:swardhara/Curriculum/curriculum.dart';
 import 'package:swardhara/HomePage/homepage.dart';
 import 'package:swardhara/LoginPage/LoginPage.dart';
 import 'package:swardhara/Profile/Profile.dart';
@@ -35,14 +37,8 @@ class _NavBarState extends State<NavBar> {
   var _widgetOptions = <Widget>[
     HomePage(),
     // Add_products(),
-    Text(
-      'Index 2: Orders',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Orders',
-      style: optionStyle,
-    ),
+    Curriculum(),
+    Blogs(),
     Profile()
     // Text(
     //   'Index 3: Settings',

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swardhara/NavBarActions/DetailedPage/DetailedPage.dart';
+import 'package:swardhara/DetailedPage/DetailedPage.dart';
 
 class LearnHisdustaniMusic extends StatefulWidget {
   const LearnHisdustaniMusic({Key? key}) : super(key: key);

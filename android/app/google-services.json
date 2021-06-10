@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "778031490951",
+    "project_id": "swardhara-da19d",
+    "storage_bucket": "swardhara-da19d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778031490951:android:0d26c2a49f8cccae895522",
+        "android_client_info": {
+          "package_name": "com.example.swardhara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778031490951-mh6nk469elk306qbtqlti617on0fcjvo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZiTyM0NA6qo0dlSM6zL57AfHV_YxOTL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778031490951-mh6nk469elk306qbtqlti617on0fcjvo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
